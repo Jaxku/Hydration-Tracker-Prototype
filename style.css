@@ -1,0 +1,138 @@
+/* styling for V3 of the hydration tracker */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #e0f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 0.2rem;
+    color: #00796b;
+}
+
+.bottle-container {
+  width: 100px;
+  height: 300px;
+  position: relative;
+  margin: 0.5rem auto;
+}
+
+/* Glass container */
+.glass {
+    position: relative;
+    width: 100px;
+    height: 300px;
+    margin: 1rem auto;
+    border: 4px solid #00796b; /* full outline visible */
+    border-radius: 8px;        /* subtle rounded corners */
+    overflow: hidden;           /* keeps water inside */
+    background: #e0f7fa;        /* background color of empty glass */
+    box-sizing: border-box;
+}
+
+/* Water fill inside glass */
+.water-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;               /* match the glass width exactly */
+    height: 0%;                /* dynamically updated by JS */
+    background-color: #2196f3; /* water color */
+    transition: height 0.5s ease-in-out; /* smooth fill animation */
+}
+
+/* Button styling */
+.button {
+    width: 140px;       /* fixed width */
+    height: 40px;       /* optional: set a fixed height to align vertically */
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 1rem;
+    white-space: nowrap; /* prevent wrapping */
+
+    display: flex;           
+    align-items: center;     
+    justify-content: center; 
+    text-align: center;      /* fallback for older browsers */
+}
+
+.button:hover {
+    background-color: #004d40;
+}
+
+/* Slider */
+#waterAmount {
+    width: 200px;
+    margin-bottom: 0.5rem;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between slider and value */
+  margin-bottom: 1rem; /* optional spacing below slider */
+}
+
+.progress-text {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.7rem;
+    color: #00796b;
+}
+
+/* Mockup for 7-day view */
+.weekly {
+    display: flex;
+    gap: 10px;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.day-bottle {
+    width: 30px;
+    height: 80px;
+    border: 2px solid #00796b;
+    border-radius: 8px;
+    position: relative;
+    background: #fff;
+}
+
+.day-fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #26c6da;
+}
+
+.quick-add-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  justify-content: center;
+}
+
+.quick-btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.quick-btn:hover {
+  background-color: #004d40;
+}

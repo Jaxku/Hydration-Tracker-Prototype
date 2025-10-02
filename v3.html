@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hydration Tracker</title>
+</head>
+<body>
+
+<h1>Hydration Tracker</h1>
+
+<!-- Bottle graphic -->
+<div class="bottle-container">
+  <div class="glass">
+    <div class="water-fill"></div>
+    <div class="glass-outline"></div>
+  </div>
+</div>
+<div class="progress-text" id="progress-text">0 / 2000 ml</div>
+
+<!-- Quick Add Buttons -->
+<div class="quick-add-buttons">
+  <button class="quick-btn" data-amount="250">+250ml</button>
+  <button class="quick-btn" data-amount="500">+500ml</button>
+  <button class="quick-btn" data-amount="750">+750ml</button>
+  <button class="quick-btn" data-amount="1000">+1000ml</button>
+</div>
+
+<!-- Water input slider -->
+<label for="waterAmount">Add water (ml): <span id="waterValue">250 ml</span></label>
+<input type="range" id="waterAmount" min="50" max="500" step="50" value="250">
+
+<button class="button" id="addWaterBtn">Add 250ml</button>
+
+<!-- Mockup 7-day screen -->
+<section style="margin-top: 0.01rem; text-align:center;">
+  <h2 style="color:#00796b; margin-bottom:1rem;">Last 7 Days Progress</h2>
+  <div class="weekly" style="justify-content:center; gap:15px;">
+    <div class="day-bottle"><div class="day-fill" style="height:30%"></div></div>
+    <div class="day-bottle"><div class="day-fill" style="height:50%"></div></div>
+    <div class="day-bottle"><div class="day-fill" style="height:80%"></div></div>
+    <div class="day-bottle"><div class="day-fill" style="height:100%"></div></div>
+    <div class="day-bottle"><div class="day-fill" style="height:60%"></div></div>
+    <div class="day-bottle"><div class="day-fill" style="height:40%"></div></div>
+    <div class="day-bottle"><div class="day-fill" style="height:90%"></div></div>
+  </div>
+</section>
+
+<script src="java.js"></script>
+
+</body>
+</html>
