@@ -58,7 +58,7 @@ h1 {
     font-size: 1rem;
     cursor: pointer;
     transition: 0.3s ease;
-    margin-bottom: 1rem;
+    margin-bottom: 0.01rem;
     white-space: nowrap; /* prevent wrapping */
 
     display: flex;           
@@ -135,4 +135,22 @@ h1 {
 
 .quick-btn:hover {
   background-color: #004d40;
+}
+
+.section-divider {
+  border: 0;
+  height: 2px;
+  margin: 0.5rem auto;
+  width: 40%;
+  background: linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,0));
+}
+
+#customAmount {
+  border: 1px solid #00796b;
+  border-radius: 4px;
+  padding: 0.2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #00796b;
+  background-color: #f0f0f0;
 }
